@@ -31,6 +31,8 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('/categorias', 'Category::index');
+$routes->get('/categorias/registrar', 'Category::form_registro');
+$routes->post('/categorias/registrar', 'Category::registrar');
 $routes->get('/categorias2', 'Category::index2');
 $routes->get('/productos', 'Product::index');
 $routes->get('/ofertas', 'Offer::index');

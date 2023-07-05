@@ -23,5 +23,23 @@ class Category extends BaseController
         return view('category/list2', $data);
     }
 
+    public function form_registro()
+    {
+        return view('category/registration');
+    }
+
+    public function registrar()
+    {
+        $category_model = new CategoryModel();
+       
+        $data = [
+            'id' => $this->request->getPost('id_categoria'),
+            'nom_categoria'  => $this->request->getPost('nom_categoria'),
+            'desc_categoria'  => $this->request->getPost('desc_categoria')
+        ];
+        $category_model->insert($data);
+        return redirect()->to(base_url().'categorias');
+    }
+
 }
 

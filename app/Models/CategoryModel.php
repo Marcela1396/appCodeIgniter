@@ -11,7 +11,7 @@ class CategoryModel extends Model{
 
     protected $returnType     = 'array';
 
-    protected $allowedFields = ['nom_categoria', 'desc_categoria'];
+    protected $allowedFields = ['id', 'nom_categoria', 'desc_categoria'];
 
 
     public function getCategories()

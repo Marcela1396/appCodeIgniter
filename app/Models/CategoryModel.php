@@ -8,10 +8,12 @@ class CategoryModel extends Model{
     
     protected $table = 'categoria';
     protected $primaryKey = 'id';
+    protected $useAutoIncrement = true;
+
 
     protected $returnType     = 'array';
 
-    protected $allowedFields = ['id', 'nom_categoria', 'desc_categoria'];
+    protected $allowedFields = ['nom_categoria', 'desc_categoria'];
 
 
     public function getCategories()

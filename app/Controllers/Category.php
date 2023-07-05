@@ -33,7 +33,6 @@ class Category extends BaseController
         $category_model = new CategoryModel();
        
         $data = [
-            'id' => $this->request->getPost('id_categoria'),
             'nom_categoria'  => $this->request->getPost('nom_categoria'),
             'desc_categoria'  => $this->request->getPost('desc_categoria')
         ];
